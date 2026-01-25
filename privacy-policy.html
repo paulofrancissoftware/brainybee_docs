@@ -30,9 +30,8 @@
       margin-bottom: 40px;
     }
     
-    .header img {
-      width: 80px;
-      height: 80px;
+    .header .bee-icon {
+      font-size: 64px;
       margin-bottom: 16px;
     }
     
@@ -103,44 +102,13 @@
       border-left-color: #4CAF50;
     }
     
-    .highlight-box.children {
-      background: #FCE4EC;
-      border-left-color: #E91E63;
-    }
-    
-    .highlight-box p {
-      margin: 0;
-    }
-    
-    strong {
-      color: #0D82B1;
-    }
-    
-    a {
-      color: #0D82B1;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 24px;
-      color: #666;
-      font-size: 0.85em;
-    }
-    
-    .contact-info {
-      background: #f5f5f5;
-      padding: 16px;
-      border-radius: 8px;
-      margin: 16px 0;
+    .highlight-box.danger {
+      background: #FFEBEE;
+      border-left-color: #F44336;
     }
     
     .toc {
-      background: #f9f9f9;
+      background: #F5F5F5;
       padding: 20px;
       border-radius: 8px;
       margin-bottom: 24px;
@@ -148,21 +116,65 @@
     
     .toc h3 {
       margin-top: 0;
-      margin-bottom: 12px;
+      color: #333;
     }
     
-    .toc ul {
-      margin: 0;
-      list-style: none;
-      padding-left: 0;
+    .toc ol {
+      margin: 12px 0 0 24px;
     }
     
     .toc li {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     
     .toc a {
-      color: #555;
+      color: #0D82B1;
+      text-decoration: none;
+    }
+    
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    
+    .contact-box {
+      background: #E8F5E9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+    
+    a {
+      color: #0D82B1;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #0D82B1;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .badge.green {
+      background: #4CAF50;
+    }
+    
+    .badge.orange {
+      background: #FF9800;
     }
     
     @media (max-width: 600px) {
@@ -187,254 +199,367 @@
 <body>
   <div class="container">
     <div class="header">
-      <div style="font-size: 64px;">🐝</div>
+      <div class="bee-icon">🐝</div>
       <h1>BrainyBee Privacy Policy</h1>
-      <p class="subtitle">Last Updated: January 25, 2026</p>
+      <p class="subtitle"><strong>Last Updated:</strong> January 25, 2026</p>
+      <div style="margin-top: 16px;">
+        <span class="badge green">COPPA Compliant</span>
+        <span class="badge">PIPEDA Compliant</span>
+        <span class="badge orange">Ages 5-15</span>
+      </div>
     </div>
     
     <div class="card">
       <div class="toc">
         <h3>📋 Table of Contents</h3>
-        <ul>
-          <li><a href="#introduction">1. Introduction</a></li>
-          <li><a href="#children">2. Children's Privacy (COPPA)</a></li>
-          <li><a href="#information">3. Information We Collect</a></li>
-          <li><a href="#use">4. How We Use Information</a></li>
-          <li><a href="#sharing">5. Information Sharing</a></li>
-          <li><a href="#advertising">6. Advertising</a></li>
-          <li><a href="#third-party">7. Third-Party Services</a></li>
-          <li><a href="#security">8. Data Security</a></li>
-          <li><a href="#retention">9. Data Retention</a></li>
-          <li><a href="#rights">10. Your Rights</a></li>
-          <li><a href="#changes">11. Changes to This Policy</a></li>
-          <li><a href="#contact">12. Contact Us</a></li>
-        </ul>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#children-privacy">Children's Privacy (COPPA)</a></li>
+          <li><a href="#info-collect">Information We Collect</a></li>
+          <li><a href="#info-not-collect">Information We Do NOT Collect</a></li>
+          <li><a href="#how-use">How We Use Information</a></li>
+          <li><a href="#info-sharing">Information Sharing</a></li>
+          <li><a href="#advertising">Advertising</a></li>
+          <li><a href="#in-app-purchases">In-App Purchases</a></li>
+          <li><a href="#third-party">Third-Party Services</a></li>
+          <li><a href="#data-security">Data Security</a></li>
+          <li><a href="#data-retention">Data Retention</a></li>
+          <li><a href="#international-transfers">International Data Transfers</a></li>
+          <li><a href="#your-rights">Your Rights</a></li>
+          <li><a href="#do-not-track">Do Not Track Signals</a></li>
+          <li><a href="#changes">Changes to This Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ol>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2 id="introduction">1. Introduction</h2>
+      <p>This Privacy Policy explains how PauloFrancis ("we," "us," or "our") collects, uses, and discloses information related to the BrainyBee mobile application (the "App" or "Service").</p>
+      
+      <div class="highlight-box success">
+        <p><strong>🎯 Target Audience:</strong> BrainyBee is designed specifically for children ages <strong>5 to 15 years old</strong>. We take children's privacy extremely seriously and have designed our App with privacy-by-default principles.</p>
       </div>
       
-      <section id="introduction">
-        <h2>1. Introduction</h2>
-        <p>This Privacy Policy explains how PauloFrancis ("we," "us," or "our") collects, uses, and discloses information related to the BrainyBee mobile application (the "App" or "Service").</p>
-        <p>By using BrainyBee, you acknowledge this Privacy Policy and consent to the practices described below.</p>
-        
-        <div class="highlight-box">
-          <p><strong>App Name:</strong> BrainyBee<br>
-          <strong>Developer:</strong> PauloFrancis<br>
-          <strong>Contact:</strong> paulofrancis.software@gmail.com<br>
-          <strong>Address:</strong> 1940 Rue Cloutier, Brossard, QC J4Z 0S4, Canada</p>
-        </div>
-      </section>
+      <p>By using BrainyBee, you acknowledge this Privacy Policy and consent to the practices described below.</p>
       
-      <section id="children">
-        <h2>2. Children's Privacy (COPPA Compliance)</h2>
-        
-        <div class="highlight-box children">
-          <p><strong>⚠️ IMPORTANT:</strong> BrainyBee is designed for and directed at children under 13 years of age. We are committed to complying with the Children's Online Privacy Protection Act (COPPA) and applicable Canadian privacy laws including PIPEDA.</p>
-        </div>
-        
-        <h3>2.1 Parental Consent</h3>
-        <p>Before collecting any personal information from a child, we require <strong>verifiable parental consent</strong> through our in-app consent flow. Parents or legal guardians must review and accept our Terms of Service and Privacy Policy before a child can use the App.</p>
-        
-        <h3>2.2 Information Collected from Children</h3>
-        <p>We collect minimal information from children:</p>
-        <ul>
-          <li><strong>Game Data:</strong> Scores, math problem responses, time spent on activities, achievement progress (stored locally by default)</li>
-          <li><strong>Device Information:</strong> Device type, operating system version (for compatibility purposes only)</li>
-          <li><strong>Optional Cloud Sync:</strong> If parents enable cloud sync via Google Sign-In, we store game progress in the cloud</li>
-        </ul>
-        
-        <h3>2.3 Parental Rights</h3>
-        <p>Parents and legal guardians have the following rights under COPPA:</p>
-        <ul>
-          <li><strong>Review:</strong> Request to review personal information collected from your child</li>
-          <li><strong>Delete:</strong> Request deletion of your child's personal information</li>
-          <li><strong>Refuse:</strong> Refuse to allow further collection or use of your child's information</li>
-          <li><strong>Revoke:</strong> Revoke consent at any time</li>
-        </ul>
-        
-        <div class="highlight-box success">
-          <p><strong>To exercise these rights:</strong> Contact us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a> with the subject line "COPPA Request - [Your Request Type]". We will respond within 10 business days.</p>
-        </div>
-        
-        <h3>2.4 Teacher/Classroom Features</h3>
-        <p>When using classroom features, student progress may be shared with assigned teachers within the App only. No student information is shared outside the App or with third parties. Both parental consent and teacher verification are required for classroom features.</p>
-      </section>
+      <div class="contact-box">
+        <p><strong>App Name:</strong> BrainyBee</p>
+        <p><strong>Developer:</strong> PauloFrancis</p>
+        <p><strong>Contact:</strong> <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a></p>
+        <p><strong>Address:</strong> 1940 Rue Cloutier, Brossard, QC J4Z 0S4, Canada</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2 id="children-privacy">2. Children's Privacy (COPPA Compliance)</h2>
       
-      <section id="information">
-        <h2>3. Information We Collect</h2>
-        
-        <h3>3.1 Personal Data</h3>
-        <p>Personal data may include information that can be used to identify or contact you:</p>
-        <ul>
-          <li>Name (display name only)</li>
-          <li>Email Address (parent's email for consent; optional for cloud sync)</li>
-          <li>Profile Picture (optional, from Google account if cloud sync is enabled)</li>
-        </ul>
-        
-        <h3>3.2 Usage Data</h3>
-        <p>We collect anonymous usage data to improve the App:</p>
-        <ul>
-          <li>App usage statistics and feature usage</li>
-          <li>Performance data and error logs</li>
-          <li>Game completion rates and learning progress</li>
-        </ul>
-        
-        <h3>3.3 Local Storage</h3>
-        <p>By default, all game data is stored locally on your device and is not transmitted to any server. Cloud sync is optional and requires explicit parental consent.</p>
-      </section>
+      <div class="highlight-box warning">
+        <p><strong>⚠️ IMPORTANT:</strong> BrainyBee is designed for and directed at children ages 5-15 years old. We are committed to complying with the Children's Online Privacy Protection Act (COPPA) and applicable Canadian privacy laws including PIPEDA.</p>
+      </div>
       
-      <section id="use">
-        <h2>4. How We Use Information</h2>
-        <p>We use collected information to:</p>
-        <ul>
-          <li>Provide and maintain the App's functionality</li>
-          <li>Track learning progress and provide educational feedback</li>
-          <li>Enable optional cloud backup and sync (with consent)</li>
-          <li>Facilitate classroom features (with appropriate consent)</li>
-          <li>Improve educational content and user experience</li>
-          <li>Respond to parent/guardian requests and inquiries</li>
-          <li>Comply with legal obligations</li>
-        </ul>
-      </section>
+      <h3>2.1 Parental Consent &amp; Age Verification</h3>
+      <p>Before collecting any personal information from a child, we require verifiable parental consent through our in-app consent flow:</p>
+      <ul>
+        <li><strong>Age Gate:</strong> Users must confirm their age category when first using the App</li>
+        <li><strong>Parental Verification:</strong> Parents or legal guardians must actively check a consent box confirming they are the parent/guardian</li>
+        <li><strong>Terms Acceptance:</strong> Parents must review and accept our Terms of Service and Privacy Policy before a child can use the App</li>
+        <li><strong>Re-consent:</strong> If we make material changes to this policy, we will require new parental consent</li>
+      </ul>
       
-      <section id="sharing">
-        <h2>5. Information Sharing and Disclosure</h2>
-        
-        <div class="highlight-box warning">
-          <p><strong>WE DO NOT SELL, RENT, OR TRADE CHILDREN'S PERSONAL INFORMATION.</strong></p>
-        </div>
-        
-        <p>We may share information only in the following limited circumstances:</p>
-        <ul>
-          <li><strong>With Parents:</strong> Upon request, we provide parents access to their child's information</li>
-          <li><strong>Service Providers:</strong> Firebase (Google) for cloud storage and authentication, subject to their privacy policies and COPPA-compliant configurations</li>
-          <li><strong>Legal Requirements:</strong> When required by law or to protect safety</li>
-          <li><strong>Teachers:</strong> Only within classroom features, with parental and teacher consent</li>
-        </ul>
-        
-        <p><strong>We do NOT share information with:</strong></p>
-        <ul>
-          <li>Advertisers or marketing companies for profiling</li>
-          <li>Data brokers</li>
-          <li>Social media platforms (except for optional authentication)</li>
-        </ul>
-      </section>
+      <h3>2.2 Information Collected from Children</h3>
+      <p>We collect <strong>minimal information</strong> from children:</p>
+      <ul>
+        <li><strong>Game Data:</strong> Scores, math problem responses, time spent on activities, achievement progress (stored locally by default)</li>
+        <li><strong>Device Information:</strong> Device type, operating system version (for compatibility purposes only)</li>
+        <li><strong>Optional Cloud Sync:</strong> If parents enable cloud sync via Google Sign-In, we store game progress in the cloud</li>
+      </ul>
       
-      <section id="advertising">
-        <h2>6. Advertising</h2>
-        
-        <div class="highlight-box children">
-          <p><strong>Child-Safe Advertising:</strong> BrainyBee displays advertisements through Google AdMob. For children's privacy protection, we use the following safeguards:</p>
-        </div>
-        
-        <ul>
-          <li><strong>Child-Directed Treatment:</strong> We configure AdMob to treat all ad requests as child-directed (COPPA-compliant)</li>
-          <li><strong>Contextual Ads Only:</strong> Ads are contextual and NOT based on user behavior or tracking</li>
-          <li><strong>No Behavioral Advertising:</strong> We do NOT use interest-based or personalized advertising for children</li>
-          <li><strong>Age-Appropriate Content:</strong> Ad content is filtered to be appropriate for children</li>
-          <li><strong>Premium Option:</strong> Users can subscribe to remove all advertisements</li>
-        </ul>
-      </section>
+      <h3>2.3 Parental Rights</h3>
+      <p>Parents and legal guardians have the following rights under COPPA:</p>
+      <ul>
+        <li><strong>Review:</strong> Request to review personal information collected from your child</li>
+        <li><strong>Delete:</strong> Request deletion of your child's personal information</li>
+        <li><strong>Refuse:</strong> Refuse to allow further collection or use of your child's information</li>
+        <li><strong>Revoke:</strong> Revoke consent at any time</li>
+      </ul>
+      <p>To exercise these rights: Contact us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a> with the subject line "COPPA Request - [Your Request Type]". We will respond within <strong>10 business days</strong>.</p>
       
-      <section id="third-party">
-        <h2>7. Third-Party Services</h2>
-        <p>We integrate the following third-party services, configured for COPPA compliance:</p>
-        
-        <h3>Firebase (Google)</h3>
-        <ul>
-          <li>Cloud database and authentication</li>
-          <li>Analytics (configured for children's apps)</li>
-          <li>Crashlytics for error reporting</li>
-          <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
-        </ul>
-        
-        <h3>Google AdMob</h3>
-        <ul>
-          <li>Contextual advertising (child-directed treatment enabled)</li>
-          <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
-        </ul>
-        
-        <h3>Google Sign-In</h3>
-        <ul>
-          <li>Optional authentication for cloud sync</li>
-          <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
-        </ul>
-      </section>
+      <h3>2.4 Teacher/Classroom Features</h3>
+      <p>When using classroom features, student progress may be shared with assigned teachers within the App only. No student information is shared outside the App or with third parties. Both parental consent and teacher verification are required for classroom features.</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="info-collect">3. Information We Collect</h2>
       
-      <section id="security">
-        <h2>8. Data Security</h2>
-        <p>We employ reasonable technical and organizational measures to protect data:</p>
-        <ul>
-          <li><strong>Encryption in Transit:</strong> All data transmitted uses HTTPS/TLS encryption</li>
-          <li><strong>Encryption at Rest:</strong> Cloud data is encrypted using Firebase's default encryption</li>
-          <li><strong>Access Controls:</strong> Restricted access with authentication safeguards</li>
-          <li><strong>Local-First:</strong> By default, data stays on your device</li>
-        </ul>
-        
+      <h3>3.1 Personal Data</h3>
+      <p>Personal data may include information that can be used to identify or contact you:</p>
+      <ul>
+        <li><strong>Name:</strong> Display name only (not full legal name)</li>
+        <li><strong>Email Address:</strong> Parent's email for consent; optional for cloud sync</li>
+        <li><strong>Profile Picture:</strong> Optional, from Google account if cloud sync is enabled</li>
+      </ul>
+      
+      <h3>3.2 Usage Data</h3>
+      <p>We collect anonymous usage data to improve the App:</p>
+      <ul>
+        <li>App usage statistics and feature usage</li>
+        <li>Performance data and error logs</li>
+        <li>Game completion rates and learning progress</li>
+      </ul>
+      
+      <h3>3.3 Local Storage</h3>
+      <p>By default, <strong>all game data is stored locally on your device</strong> and is not transmitted to any server. Cloud sync is optional and requires explicit parental consent.</p>
+      
+      <h3>3.4 Offline Functionality</h3>
+      <div class="highlight-box">
+        <p><strong>📱 Offline Mode:</strong> The App functions fully offline. No data is collected or transmitted while offline. When connectivity resumes and cloud sync is enabled, only game progress data is synchronized.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2 id="info-not-collect">4. Information We Do NOT Collect</h2>
+      
+      <div class="highlight-box success">
+        <p><strong>🛡️ Privacy by Design:</strong> BrainyBee is designed with children's safety as a priority. The following features are intentionally NOT included:</p>
+      </div>
+      
+      <ul>
+        <li><strong>🎤 Microphone:</strong> BrainyBee does NOT access or use the device's microphone</li>
+        <li><strong>📷 Camera:</strong> BrainyBee does NOT access or use the device's camera</li>
+        <li><strong>📍 Location:</strong> BrainyBee does NOT collect GPS or precise location data</li>
+        <li><strong>📇 Contacts:</strong> BrainyBee does NOT access the device's contact list</li>
+        <li><strong>📸 Screenshots:</strong> BrainyBee does NOT take screenshots or record screen activity</li>
+        <li><strong>💬 Chat/Messaging:</strong> There are NO chat rooms, messaging features, or ways for children to communicate with strangers</li>
+        <li><strong>🌐 Social Features:</strong> Children cannot post public content, share personal information with other users, or create public profiles</li>
+        <li><strong>🔔 Unsolicited Notifications:</strong> We do NOT send push notifications to children without parental consent</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="how-use">5. How We Use Information</h2>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Provide and maintain the App's functionality</li>
+        <li>Track learning progress and provide educational feedback</li>
+        <li>Enable optional cloud backup and sync (with consent)</li>
+        <li>Facilitate classroom features (with appropriate consent)</li>
+        <li>Improve educational content and user experience</li>
+        <li>Respond to parent/guardian requests and inquiries</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="info-sharing">6. Information Sharing and Disclosure</h2>
+      
+      <div class="highlight-box danger">
+        <p><strong>🚫 WE DO NOT SELL, RENT, OR TRADE CHILDREN'S PERSONAL INFORMATION. EVER.</strong></p>
+      </div>
+      
+      <p>We may share information only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>With Parents:</strong> Upon request, we provide parents access to their child's information</li>
+        <li><strong>Service Providers:</strong> Firebase (Google) for cloud storage and authentication, subject to their privacy policies and COPPA-compliant configurations</li>
+        <li><strong>Legal Requirements:</strong> When required by law or to protect safety</li>
+        <li><strong>Teachers:</strong> Only within classroom features, with parental and teacher consent</li>
+      </ul>
+      
+      <p><strong>We do NOT share information with:</strong></p>
+      <ul>
+        <li>Advertisers or marketing companies for profiling</li>
+        <li>Data brokers</li>
+        <li>Social media platforms (except for optional authentication)</li>
+        <li>Any third party for behavioral advertising purposes</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="advertising">7. Advertising</h2>
+      
+      <h3>Child-Safe Advertising</h3>
+      <p>BrainyBee displays advertisements through Google AdMob. For children's privacy protection, we use the following safeguards:</p>
+      <ul>
+        <li><strong>Child-Directed Treatment:</strong> We configure AdMob to treat all ad requests as child-directed (COPPA-compliant)</li>
+        <li><strong>Contextual Ads Only:</strong> Ads are contextual and NOT based on user behavior or tracking</li>
+        <li><strong>No Behavioral Advertising:</strong> We do NOT use interest-based or personalized advertising for children</li>
+        <li><strong>Age-Appropriate Content:</strong> Ad content is filtered to be appropriate for children</li>
+        <li><strong>No Data Collection for Ads:</strong> We do not collect or share personal information for advertising purposes</li>
+        <li><strong>Premium Option:</strong> Users can subscribe to remove all advertisements</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="in-app-purchases">8. In-App Purchases</h2>
+      
+      <div class="highlight-box warning">
+        <p><strong>👨‍👩‍👧 Parental Control Required:</strong> All in-app purchases in BrainyBee require parental authentication.</p>
+      </div>
+      
+      <ul>
+        <li><strong>Authentication Required:</strong> In-app purchases require device password/biometric authentication controlled by the device's app store (Google Play)</li>
+        <li><strong>No Direct Child Purchases:</strong> Children cannot make purchases without parental approval</li>
+        <li><strong>Clear Pricing:</strong> All prices are clearly displayed before purchase</li>
+        <li><strong>No Manipulative Tactics:</strong> We do not use manipulative tactics, pressure, or dark patterns to encourage purchases</li>
+        <li><strong>Refund Policy:</strong> Accidental purchases can be refunded through Google Play Store within their refund window</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="third-party">9. Third-Party Services</h2>
+      <p>We integrate the following third-party services, all configured for COPPA compliance:</p>
+      
+      <h3>Firebase (Google)</h3>
+      <ul>
+        <li>Cloud database and authentication</li>
+        <li>Analytics (configured for children's apps - no advertising identifiers)</li>
+        <li>Crashlytics for error reporting (no personal data included)</li>
+        <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+      </ul>
+      
+      <h3>Google AdMob</h3>
+      <ul>
+        <li>Contextual advertising (child-directed treatment enabled)</li>
+        <li>COPPA-compliant ad serving</li>
+        <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      </ul>
+      
+      <h3>Google Sign-In</h3>
+      <ul>
+        <li>Optional authentication for cloud sync</li>
+        <li>Used only when explicitly enabled by parent</li>
+        <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="data-security">10. Data Security</h2>
+      <p>We employ reasonable technical and organizational measures to protect data:</p>
+      <ul>
+        <li><strong>Encryption in Transit:</strong> All data transmitted uses HTTPS/TLS encryption</li>
+        <li><strong>Encryption at Rest:</strong> Cloud data is encrypted using Firebase's default encryption</li>
+        <li><strong>Access Controls:</strong> Restricted access with authentication safeguards</li>
+        <li><strong>Local-First:</strong> By default, data stays on your device</li>
+        <li><strong>Minimal Data Collection:</strong> We only collect data necessary for app functionality</li>
+        <li><strong>Regular Review:</strong> We regularly review our data practices for security</li>
+      </ul>
+      
+      <div class="highlight-box">
         <p><strong>Limitation:</strong> No method of transmission or storage is 100% secure. While we strive to use industry-standard practices, we cannot guarantee absolute security.</p>
-      </section>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2 id="data-retention">11. Data Retention</h2>
+      <ul>
+        <li><strong>Local Data:</strong> Retained on device until manually deleted by user or app is uninstalled</li>
+        <li><strong>Cloud Data:</strong> Retained while account is active, plus 90 days after deletion request</li>
+        <li><strong>Consent Records:</strong> Retained for 3 years to comply with COPPA verification requirements</li>
+        <li><strong>Backup Data:</strong> Purged within 30 days of deletion request</li>
+        <li><strong>Analytics Data:</strong> Aggregated and anonymized; retained for product improvement</li>
+      </ul>
+      <p>Contact us to request data deletion at any time.</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="international-transfers">12. International Data Transfers</h2>
       
-      <section id="retention">
-        <h2>9. Data Retention</h2>
-        <ul>
-          <li><strong>Local Data:</strong> Retained on device until manually deleted by user</li>
-          <li><strong>Cloud Data:</strong> Retained while account is active, plus 90 days after deletion request</li>
-          <li><strong>Consent Records:</strong> Retained for 3 years to comply with COPPA</li>
-          <li><strong>Backup Data:</strong> Purged within 30 days of deletion request</li>
-        </ul>
-        <p>Contact us to request data deletion at any time.</p>
-      </section>
+      <div class="highlight-box">
+        <p><strong>🌍 Cross-Border Data:</strong> BrainyBee is operated from Canada. If you use our App from outside Canada, your information may be transferred to, stored, and processed in Canada and the United States (where our service providers, including Google/Firebase, maintain servers).</p>
+      </div>
       
-      <section id="rights">
-        <h2>10. Your Rights</h2>
-        <p>Depending on your jurisdiction, you may have the following rights:</p>
-        <ul>
-          <li><strong>Access:</strong> Request a copy of data we store about you or your child</li>
-          <li><strong>Correction:</strong> Request correction of inaccurate data</li>
-          <li><strong>Deletion:</strong> Request deletion of personal data</li>
-          <li><strong>Opt-Out:</strong> Opt-out of certain collection or processing activities</li>
-          <li><strong>Portability:</strong> Request data in a portable format</li>
-        </ul>
-        
-        <h3>Canadian Users (PIPEDA)</h3>
-        <p>Canadian users have additional rights including the right to file a complaint with the Privacy Commissioner of Canada.</p>
-        
-        <h3>European Users (GDPR)</h3>
-        <p>EU users have rights under GDPR including the right to lodge a complaint with a supervisory authority.</p>
-        
-        <h3>California Users (CCPA)</h3>
-        <p>California residents have rights under CCPA including the right to know and the right to delete.</p>
-      </section>
+      <p>By using BrainyBee, you consent to the transfer of your information to these countries, which may have different data protection laws than your country of residence.</p>
       
-      <section id="changes">
-        <h2>11. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy periodically. Material changes affecting children's data will require new parental consent. We will notify users through:</p>
-        <ul>
-          <li>In-app notification</li>
-          <li>Updated "Last Updated" date on this page</li>
-          <li>Email notification for significant changes</li>
-        </ul>
-      </section>
+      <p>We ensure that any international transfers comply with applicable laws and that appropriate safeguards are in place to protect your data.</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="your-rights">13. Your Rights</h2>
+      <p>Depending on your jurisdiction, you may have the following rights:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of data we store about you or your child</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+        <li><strong>Deletion:</strong> Request deletion of personal data</li>
+        <li><strong>Opt-Out:</strong> Opt-out of certain collection or processing activities</li>
+        <li><strong>Portability:</strong> Request data in a portable format</li>
+      </ul>
       
-      <section id="contact">
-        <h2>12. Contact Us</h2>
-        <p>For privacy questions, to exercise your rights, or to report concerns:</p>
-        
-        <div class="contact-info">
-          <p><strong>Email:</strong> <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a></p>
-          <p><strong>Address:</strong> 1940 Rue Cloutier, Brossard, QC J4Z 0S4, Canada</p>
-          <p><strong>Response Time:</strong> Within 48 hours (10 business days for formal COPPA requests)</p>
-          <p><strong>Subject Line:</strong> "Privacy Request - [Your Request Type]"</p>
-        </div>
-        
-        <div class="highlight-box success">
-          <p><strong>Your Privacy Matters:</strong> We are committed to protecting children's privacy and complying with all applicable laws. If you have any concerns, please contact us immediately.</p>
-        </div>
-      </section>
+      <h3>Canadian Users (PIPEDA)</h3>
+      <p>Canadian users have additional rights under the Personal Information Protection and Electronic Documents Act (PIPEDA), including the right to:</p>
+      <ul>
+        <li>Access your personal information held by us</li>
+        <li>Challenge the accuracy and completeness of your information</li>
+        <li>File a complaint with the <a href="https://www.priv.gc.ca/" target="_blank">Privacy Commissioner of Canada</a></li>
+      </ul>
+      
+      <h3>European Users (GDPR)</h3>
+      <p>EU users have rights under GDPR including:</p>
+      <ul>
+        <li>Right to access, rectification, and erasure</li>
+        <li>Right to restrict processing</li>
+        <li>Right to data portability</li>
+        <li>Right to lodge a complaint with a supervisory authority</li>
+      </ul>
+      
+      <h3>California Users (CCPA)</h3>
+      <p>California residents have rights under CCPA including:</p>
+      <ul>
+        <li>Right to know what personal information is collected</li>
+        <li>Right to delete personal information</li>
+        <li>Right to opt-out of sale of personal information (note: we do NOT sell personal information)</li>
+        <li>Right to non-discrimination for exercising your rights</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 id="do-not-track">14. Do Not Track Signals</h2>
+      <p>Our App respects "Do Not Track" (DNT) signals. When we detect a DNT signal:</p>
+      <ul>
+        <li>We do not track users across third-party websites or services</li>
+        <li>We do not use behavioral advertising</li>
+        <li>We limit data collection to essential app functionality only</li>
+      </ul>
+      <p>Note: As a children's app, we already limit tracking by default regardless of DNT signals.</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="changes">15. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. Material changes affecting children's data will require new parental consent.</p>
+      
+      <p><strong>We will notify users through:</strong></p>
+      <ul>
+        <li>In-app notification requiring acknowledgment</li>
+        <li>Updated "Last Updated" date on this page</li>
+        <li>Email notification for significant changes (if email is provided)</li>
+        <li>Requiring re-consent for material changes affecting children's data</li>
+      </ul>
+      
+      <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="contact">16. Contact Us</h2>
+      <p>For privacy questions, to exercise your rights, or to report concerns:</p>
+      
+      <div class="contact-box">
+        <p><strong>📧 Email:</strong> <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a></p>
+        <p><strong>📬 Address:</strong> 1940 Rue Cloutier, Brossard, QC J4Z 0S4, Canada</p>
+        <p><strong>⏱️ Response Time:</strong> Within 48 hours (10 business days for formal COPPA requests)</p>
+        <p><strong>📝 Subject Line:</strong> "Privacy Request - [Your Request Type]"</p>
+      </div>
+      
+      <div class="highlight-box success" style="margin-top: 20px;">
+        <p><strong>💚 Your Privacy Matters:</strong> We are committed to protecting children's privacy and complying with all applicable laws. If you have any concerns about your child's privacy or our data practices, please contact us immediately. We take all concerns seriously and will respond promptly.</p>
+      </div>
     </div>
     
     <div class="footer">
       <p>© 2026 PauloFrancis. All rights reserved.</p>
-      <p>BrainyBee - Fun Math Learning for Kids 🐝</p>
+      <p style="margin-top: 8px;">🐝 <strong>BrainyBee</strong> - Fun Math Learning for Kids</p>
+      <p style="margin-top: 16px; font-size: 0.85em; color: #888;">
+        This privacy policy was last reviewed and updated on January 25, 2026.<br>
+        Version 2.0
+      </p>
     </div>
   </div>
 </body>
