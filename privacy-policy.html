@@ -201,7 +201,7 @@
     <div class="header">
       <div class="bee-icon">🐝</div>
       <h1>BrainyBee Privacy Policy</h1>
-      <p class="subtitle"><strong>Last Updated:</strong> June 1, 2026</p>
+      <p class="subtitle"><strong>Last Updated:</strong> June 4, 2026</p>
       <div style="margin-top: 16px;">
         <span class="badge green">COPPA-Focused Privacy</span>
         <span class="badge">PIPEDA-Aware Privacy</span>
@@ -273,7 +273,7 @@
       <ul>
         <li><strong>Game Data:</strong> Scores, math problem responses, time spent on activities, achievement progress (stored locally by default)</li>
         <li><strong>Device Information:</strong> Device type, operating system version (for compatibility purposes only)</li>
-        <li><strong>Optional Cloud Sync:</strong> If parents enable cloud sync via Google Sign-In, we store game progress in the cloud</li>
+        <li><strong>Cloud Sync and Account Sessions:</strong> If cloud sync is enabled through Google Sign-In, Sign in with Apple, or a school-authorized account, we store game progress and preferences in Firebase. Android may create a Firebase anonymous session to support app functionality before optional account linking.</li>
       </ul>
       
       <h3>2.3 Parental Rights</h3>
@@ -292,8 +292,9 @@
       <h3 id="school-version">2.5 Brainy Bee Schools Addendum</h3>
       <p>Brainy Bee Schools is a school-managed version of the App for school-authorized educational use. For school accounts, access is managed by the school or district, and the consumer in-app parental consent prompt may not be shown.</p>
       <p>Where permitted by COPPA, a school or district may authorize collection, use, and disclosure of student personal information on behalf of parents only for the use and benefit of the school and only in the educational context. We remain responsible for our own COPPA obligations and provide notice of our collection, use, and disclosure practices to schools.</p>
-      <p>School-version data may include school roster information, school email or account identifiers, display names, class membership, assigned classes or rooms, math practice results, student progress, and device-level preferences needed to provide the service. We use this information only to provide, secure, support, and improve the school-requested educational service.</p>
-      <p>Students may be able to control device-level practice reminder notifications. These reminders are for educational practice only and are not used for advertising, profiling, or marketing.</p>
+      <p>School-version data may include school roster information, Firebase user IDs or school account identifiers, school email addresses, display names, school role, class membership, assigned classes or rooms, room membership, class controls, math practice results, question-level reports, student progress, achievements, Skill Builder progress, avatar choices, notification preferences, and device-level preferences needed to provide the service. We use this information only to provide, secure, support, and improve the school-requested educational service.</p>
+      <p>For school administrators and teachers, the App may store school information, teacher/student records entered by authorized staff, class policies, room settings, school branding choices, and uploaded or selected logo/branding assets. Material and resource uploads that are labeled as local drafts are not published to teachers or students until a publishing feature is implemented.</p>
+      <p>Students may be able to control local device-level practice reminder notifications where allowed by parent or school settings. These reminders are scheduled on the device for educational practice only and are not advertising, profiling, or marketing push messages.</p>
       <p>We do not use school-version student information for targeted advertising, behavioral advertising, sale, marketing profiles, or unrelated commercial purposes. We do not re-disclose education records or student personal information except to service providers that help provide the App, as required by law, or as directed by the school or district.</p>
       <p>Parents, guardians, and eligible students should contact their school or district to exercise rights related to education records. Schools and districts may contact us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a> for access, correction, export, deletion, or to prevent further collection or use of student information where applicable.</p>
       <p>Schools and districts may also have obligations under FERPA, PPRA, state student privacy laws, and local policy. Brainy Bee Schools is designed to support role-based access controls so students cannot view school directory information and teachers/admins see only tools available to their role.</p>
@@ -306,8 +307,10 @@
       <p>Personal data may include information that can be used to identify or contact you:</p>
       <ul>
         <li><strong>Name:</strong> Display name only (not full legal name)</li>
-        <li><strong>Email Address:</strong> Parent's email for consent; optional for cloud sync</li>
-        <li><strong>Profile Picture:</strong> Optional, from Google account if cloud sync is enabled</li>
+        <li><strong>Email Address:</strong> Parent email for consent; optional account email for cloud sync; school email or account identifier for school-authorized accounts</li>
+        <li><strong>Account Identifiers:</strong> Firebase user ID, school account ID, class membership, school role, and room membership when needed for cloud sync, school features, or classroom rooms</li>
+        <li><strong>Profile Picture:</strong> Optional, from Google account if cloud sync is enabled. If Sign in with Apple is used, Apple may provide account information according to the user's Apple settings.</li>
+        <li><strong>Avatar and Preferences:</strong> Optional avatar choices, Skill Builder progress, notification preferences, and other app settings needed to provide the service</li>
       </ul>
       
       <h3>3.2 Usage Data</h3>
@@ -316,14 +319,15 @@
         <li>App usage statistics and feature usage</li>
         <li>Performance data and error logs</li>
         <li>Game completion rates and learning progress</li>
+        <li>Room/class participation, assigned practice activity, question-level reports, and teacher-visible progress where classroom or school features are used</li>
       </ul>
       
       <h3>3.3 Local Storage</h3>
-      <p>By default, <strong>all game data is stored locally on your device</strong> and is not transmitted to any server. Cloud sync is optional and requires explicit parental consent.</p>
+      <p>By default in the consumer app, game data is stored locally unless cloud sync is enabled. Some Firebase-backed features, such as signed-in cloud sync, school accounts, assigned rooms, school rosters, class controls, and school administration tools, require online storage in Firebase to work. School-version use may be authorized and managed by the school or district.</p>
       
       <h3>3.4 Offline Functionality</h3>
       <div class="highlight-box">
-        <p><strong>📱 Offline Mode:</strong> The App functions fully offline. No data is collected or transmitted while offline. When connectivity resumes and cloud sync is enabled, only game progress data is synchronized.</p>
+        <p><strong>📱 Offline Mode:</strong> Many practice features work offline. Data created offline stays on the device until connectivity resumes. If the user is signed in, using school features, or playing an assigned room, relevant progress, preferences, and room/class results may synchronize to Firebase when the connection returns.</p>
       </div>
     </div>
     
@@ -340,9 +344,9 @@
         <li><strong>📍 Location:</strong> BrainyBee does NOT collect GPS or precise location data</li>
         <li><strong>📇 Contacts:</strong> BrainyBee does NOT access the device's contact list</li>
         <li><strong>📸 Screenshots:</strong> BrainyBee does NOT take screenshots or record screen activity</li>
-        <li><strong>💬 Chat/Messaging:</strong> There are NO chat rooms, messaging features, or ways for children to communicate with strangers</li>
+        <li><strong>💬 Chat/Messaging:</strong> There are NO chat rooms, direct messaging features, or ways for children to communicate with strangers. Classroom rooms are limited to teacher-created assignments, results, membership, and optional leaderboards; they are not messaging spaces.</li>
         <li><strong>🌐 Social Features:</strong> Children cannot post public content, share personal information with other users, or create public profiles</li>
-        <li><strong>🔔 Unsolicited Notifications:</strong> We do NOT send push notifications to children without parental consent</li>
+        <li><strong>🔔 Unsolicited Notifications:</strong> We do NOT send marketing push notifications to children. Practice reminders are local device notifications and require parent, device, or school permission where applicable.</li>
       </ul>
     </div>
     
@@ -352,8 +356,8 @@
       <ul>
         <li>Provide and maintain the App's functionality</li>
         <li>Track learning progress and provide educational feedback</li>
-        <li>Enable optional cloud backup and sync (with consent)</li>
-        <li>Facilitate classroom features (with appropriate consent)</li>
+        <li>Enable cloud backup, school-authorized account access, and sync where enabled or authorized</li>
+        <li>Facilitate classroom and school features, including assigned rooms, class policies, teacher dashboards, and school administration tools</li>
         <li>Improve educational content and user experience</li>
         <li>Respond to parent/guardian requests and inquiries</li>
         <li>Comply with legal obligations</li>
@@ -370,9 +374,10 @@
       <p>We may share information only in the following limited circumstances:</p>
       <ul>
         <li><strong>With Parents:</strong> Upon request, we provide parents access to their child's information</li>
-        <li><strong>Service Providers:</strong> Firebase (Google) for cloud storage and authentication, subject to their privacy policies and COPPA-compliant configurations</li>
+        <li><strong>Service Providers:</strong> Firebase (Google) for authentication, account/session management, cloud database, cloud storage, analytics where enabled, and school services, subject to their privacy policies and COPPA-compliant configurations</li>
+        <li><strong>Apple:</strong> If Sign in with Apple is used, Apple provides authentication according to Apple's terms and privacy policy</li>
         <li><strong>Legal Requirements:</strong> When required by law or to protect safety</li>
-        <li><strong>Teachers:</strong> Only within classroom features, with parental and teacher consent</li>
+        <li><strong>Teachers and School Administrators:</strong> Only within classroom and school features, according to parent, school, or district authorization</li>
       </ul>
       
       <p><strong>We do NOT share information with:</strong></p>
@@ -404,11 +409,11 @@
       </div>
       
       <ul>
-        <li><strong>Authentication Required:</strong> In-app purchases require device password/biometric authentication controlled by the device's app store (Google Play)</li>
+        <li><strong>Authentication Required:</strong> In-app purchases require device password/biometric authentication controlled by the device's app store (Google Play or Apple App Store, depending on device)</li>
         <li><strong>No Direct Child Purchases:</strong> Children cannot make purchases without parental approval</li>
         <li><strong>Clear Pricing:</strong> All prices are clearly displayed before purchase</li>
         <li><strong>No Manipulative Tactics:</strong> We do not use manipulative tactics, pressure, or dark patterns to encourage purchases</li>
-        <li><strong>Refund Policy:</strong> Accidental purchases can be refunded through Google Play Store within their refund window</li>
+        <li><strong>Refund Policy:</strong> Accidental purchases can be refunded through the applicable app store within its refund window</li>
       </ul>
     </div>
     
@@ -418,17 +423,23 @@
       
       <h3>Firebase (Google)</h3>
       <ul>
-        <li>Cloud database and authentication</li>
-        <li>Analytics (configured for children's apps - no advertising identifiers)</li>
-        <li>Crashlytics for error reporting (no personal data included)</li>
+        <li>Cloud database, cloud storage, authentication, and account/session management</li>
+        <li>Firebase Analytics in Android builds, configured without advertising use for children</li>
         <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
       </ul>
       
       <h3>Google Sign-In</h3>
       <ul>
-        <li>Optional authentication for cloud sync</li>
-        <li>Used only when explicitly enabled by parent</li>
+        <li>Optional authentication for cloud sync and account linking</li>
+        <li>Used when explicitly enabled by a parent or authorized for a school account</li>
         <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      </ul>
+
+      <h3>Sign in with Apple</h3>
+      <ul>
+        <li>Optional authentication for Apple users where available</li>
+        <li>Used only when selected by the user or supported by the school sign-in flow</li>
+        <li>Privacy Policy: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></li>
       </ul>
     </div>
     
@@ -453,7 +464,7 @@
       <h2 id="data-retention">11. Data Retention</h2>
       <ul>
         <li><strong>Local Data:</strong> Retained on device until manually deleted by user or app is uninstalled</li>
-        <li><strong>Cloud Data:</strong> Retained while account is active, plus 90 days after deletion request</li>
+        <li><strong>Cloud Data:</strong> Retained while the account, classroom, room, or school relationship is active, plus up to 90 days after a verified deletion request unless a longer period is required by law or school/district instruction</li>
         <li><strong>Consent Records:</strong> Retained for 3 years to comply with COPPA verification requirements</li>
         <li><strong>Backup Data:</strong> Purged within 30 days of deletion request</li>
         <li><strong>Analytics Data:</strong> Aggregated and anonymized; retained for product improvement</li>
