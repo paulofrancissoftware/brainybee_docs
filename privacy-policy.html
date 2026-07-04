@@ -216,6 +216,7 @@
           <li><a href="#introduction">Introduction</a></li>
           <li><a href="#children-privacy">Children's Privacy (COPPA)</a></li>
           <li><a href="#school-version">Brainy Bee Schools Addendum</a></li>
+          <li><a href="#ferpa">FERPA Notice (Schools &amp; Districts)</a></li>
           <li><a href="#info-collect">Information We Collect</a></li>
           <li><a href="#info-not-collect">Information We Do NOT Collect</a></li>
           <li><a href="#how-use">How We Use Information</a></li>
@@ -299,6 +300,56 @@
       <p>Parents, guardians, and eligible students should contact their school or district to exercise rights related to education records. Schools and districts may contact us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a> for access, correction, export, deletion, or to prevent further collection or use of student information where applicable.</p>
       <p>Schools and districts may also have obligations under FERPA, PPRA, state student privacy laws, and local policy. Brainy Bee Schools is designed to support role-based access controls so students cannot view school directory information and teachers/admins see only tools available to their role.</p>
     </div>
+
+    <div class="card">
+      <h2 id="ferpa">2.6 FERPA Notice (Schools &amp; Districts)</h2>
+
+      <h3>Our Role Under FERPA</h3>
+      <p>When Brainy Bee Schools is used by a school or district subject to the Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. § 1232g, we act as a <strong>school official</strong> with a legitimate educational interest in student education records, as permitted under 34 C.F.R. § 99.31(a)(1). The school or district retains control of the education records; we process them only at the direction of the school and only to provide the App service.</p>
+
+      <h3>Data Processing Agreement</h3>
+      <p>Schools and districts that require a written Data Processing Agreement (DPA) before deployment may request one by contacting us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a>. The DPA will document our FERPA obligations, data handling practices, security measures, and deletion commitments.</p>
+
+      <h3>What Education Records We Process</h3>
+      <ul>
+        <li>Student display name and school account identifier</li>
+        <li>School email address or account email provided by the school/SSO system</li>
+        <li>School organization ID, class ID, and assigned role (student or teacher)</li>
+        <li>Math practice results, question-level reports, scores, and progress data</li>
+        <li>Assignment participation, room membership, and teacher-visible progress</li>
+        <li>Device-level preferences (sound, keyboard) and avatar choices permitted by school policy</li>
+      </ul>
+      <p>We do <strong>not</strong> collect Social Security numbers, government-issued IDs, financial account information, health or biometric data, geolocation, or any data unrelated to the educational service.</p>
+
+      <h3>Permitted Uses Only</h3>
+      <p>Education records processed through Brainy Bee Schools are used exclusively to:</p>
+      <ul>
+        <li>Provide the math practice and classroom assignment features requested by the school</li>
+        <li>Display student progress to assigned teachers within their class</li>
+        <li>Enforce school-configured class policies and access controls</li>
+        <li>Maintain security, prevent unauthorized access, and fix errors in the service</li>
+      </ul>
+      <p>We do <strong>not</strong> use education records for advertising, marketing, profiling, sale, or any purpose unrelated to the school-requested educational service.</p>
+
+      <h3>Re-Disclosure Restrictions</h3>
+      <p>We do not re-disclose education records to third parties except: (a) to subprocessors that help provide the App under confidentiality obligations consistent with FERPA; (b) as required by law or court order; or (c) as expressly directed in writing by the school or district. All subprocessors are listed in our DPA upon request.</p>
+
+      <h3>Parent and Eligible Student Rights</h3>
+      <p>Under FERPA, parents of students under 18 (and eligible students 18 and older) have the right to:</p>
+      <ul>
+        <li><strong>Inspect and review</strong> their child's education records held in the App</li>
+        <li><strong>Request correction</strong> of inaccurate or misleading information</li>
+        <li><strong>Request deletion</strong> of their child's education records from the App</li>
+        <li><strong>Restrict disclosure</strong> — by contacting the school to revoke the school's authorization</li>
+      </ul>
+      <p>Because the school or district controls these records under FERPA, rights requests should first be directed to the school or district. Schools may then contact us at <a href="mailto:paulofrancis.software@gmail.com">paulofrancis.software@gmail.com</a> to process access, correction, export, or deletion requests on your behalf. We will respond to school-authorized requests within <strong>10 business days</strong>.</p>
+
+      <h3>Data Retention</h3>
+      <p>Student education records in the App are retained only as long as the school's license is active or as directed by the school. Upon termination of a school's use of the App, or upon a verified deletion request from the school, we will delete or anonymize student education records within <strong>30 days</strong>, except where retention is required by law.</p>
+
+      <h3>Security</h3>
+      <p>We implement role-based access controls enforced in Firebase Security Rules so that students can only access their own records, teachers can only access records for their assigned classes, and cross-class access is blocked. All data is transmitted over TLS/HTTPS. School admins control who can view the school directory, class membership, and admin tools.</p>
+    </div>
     
     <div class="card">
       <h2 id="info-collect">3. Information We Collect</h2>
@@ -313,8 +364,8 @@
         <li><strong>Avatar and Preferences:</strong> Optional avatar choices, Skill Builder progress, notification preferences, and other app settings needed to provide the service</li>
       </ul>
       
-      <h3>3.2 Usage Data</h3>
-      <p>We collect anonymous usage data to improve the App:</p>
+      <h3>3.2 Usage and Learning Data</h3>
+      <p>We collect learning activity and limited app-use data needed to provide the App and improve the educational experience. In the Brainy Bee Schools iOS build, this is product functionality data; that build does not include Firebase Analytics, Google Analytics, AdMob, or any third-party advertising SDK.</p>
       <ul>
         <li>App usage statistics and feature usage</li>
         <li>Performance data and error logs</li>
@@ -375,6 +426,7 @@
       <ul>
         <li><strong>With Parents:</strong> Upon request, we provide parents access to their child's information</li>
         <li><strong>Service Providers:</strong> Firebase (Google) for authentication, account/session management, cloud database, cloud storage, analytics where enabled, and school services, subject to their privacy policies and COPPA-compliant configurations</li>
+        <li><strong>Clever:</strong> In Brainy Bee Schools, Clever is used for school-authorized single sign-on and roster authorization. Clever may process school/district authorization details, Clever account identifiers, role/class information, and redirect/session information needed to authenticate the user and issue a Firebase session for the App.</li>
         <li><strong>Apple:</strong> If Sign in with Apple is used, Apple provides authentication according to Apple's terms and privacy policy</li>
         <li><strong>Legal Requirements:</strong> When required by law or to protect safety</li>
         <li><strong>Teachers and School Administrators:</strong> Only within classroom and school features, according to parent, school, or district authorization</li>
@@ -396,6 +448,7 @@
       <p>BrainyBee does not display third-party advertisements in the app. For children's privacy protection, we use the following safeguards:</p>
       <ul>
         <li><strong>No Ad SDK:</strong> BrainyBee does not use an advertising SDK to serve ads</li>
+        <li><strong>No iOS Ad Network:</strong> Brainy Bee Schools for iOS does not include AdMob, Google Mobile Ads, or another ad network SDK</li>
         <li><strong>No Behavioral Advertising:</strong> We do NOT use interest-based or personalized advertising for children</li>
         <li><strong>No Data Collection for Ads:</strong> We do not collect or share personal information for advertising purposes</li>
       </ul>
@@ -424,7 +477,8 @@
       <h3>Firebase (Google)</h3>
       <ul>
         <li>Cloud database, cloud storage, authentication, and account/session management</li>
-        <li>Firebase Analytics in Android builds, configured without advertising use for children</li>
+        <li>Brainy Bee Schools for iOS uses Firebase Auth, Firestore, Storage, and Core. Firebase Analytics, Google Analytics, and Firebase/Google advertising products are not enabled in that iOS build.</li>
+        <li>Firebase Analytics may be used in Android consumer builds, configured without advertising use for children</li>
         <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
       </ul>
       
@@ -433,6 +487,13 @@
         <li>Optional authentication for cloud sync and account linking</li>
         <li>Used when explicitly enabled by a parent or authorized for a school account</li>
         <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      </ul>
+
+      <h3>Clever</h3>
+      <ul>
+        <li>School-authorized single sign-on and roster authorization for Brainy Bee Schools</li>
+        <li>Used to authenticate teachers and students, verify school access, and connect the account to Firebase-backed school features</li>
+        <li>Privacy Policy: <a href="https://www.clever.com/trust/privacy/policy" target="_blank">clever.com/trust/privacy/policy</a></li>
       </ul>
 
       <h3>Sign in with Apple</h3>
